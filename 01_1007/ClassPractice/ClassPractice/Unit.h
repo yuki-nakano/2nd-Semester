@@ -7,7 +7,7 @@ public:
 	Unit();
 	~Unit();
 	void PrintState();
-public:
+private:
 	int m_hp;
 	int m_str;
 	int m_mag;
