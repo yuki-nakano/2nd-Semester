@@ -9,26 +9,39 @@ void printStatus(std::string name, Base* target);
 
 int main()
 {
-	Player player;
-	player.SetMoveSpeed(5.0f);
+	Base* player = new Player();
+	player->SetMoveSpeed(5.0f);
 
-	Enemy enemy;
-	enemy.SetHp(100);
+	Base* enemy = new Enemy();
+	enemy->SetHp(100);
 
-	Base* pBase = nullptr;
+	Base* pBase[] =
+	{
+		player,
+		enemy
+	};
 
+	std::string name[] =
+	{
+		"Player",
+		"Enemy",
+	};
 	printf("-------------\n");
 	printf("PRACTICE02_04\n");
 	printf("-------------\n");
 
-	pBase = &player;
-	pBase->CheckHit(10, 10, 20, 30);
-	printStatus("Player", pBase);
+	for (int i = 0; i < 2; i++)
+	{
+		pBase[i]->Exec();
+		pBase[i]->Draw();
+		pBase[i]->CheckHit(10, 10, 20, 30);
+		printStatus(name[i].c_str(), pBase[i]);
+	}
 
-	pBase = &enemy;
-	pBase->CheckHit(10, 10, 20, 30);
-	printStatus("Enemy", pBase);
-
+	delete player;
+	player = nullptr;
+	delete enemy;
+	enemy = nullptr;
 
 	system("pause");
 	return 0;

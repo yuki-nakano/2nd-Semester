@@ -1,11 +1,37 @@
 #include "base.h"
+#include <stdio.h>
 
 Base::Base()
 {
+	m_Hp = 0;
+	m_PosX = 0.0f;
+	m_PosY = 0.0f;
+	m_MoveSpeed = 0.0f;
+
+	m_Width = 10;
+	m_Height = 10;
+
+	printf("Base:コンストラクタ");
 }
 
 Base::~Base()
 {
+	printf("Base:デストラクタ");
+}
+
+void Base::Exec()
+{
+
+}
+void Base::Draw()
+{
+
+}
+
+bool Base::CheckHit(int x, int y, int width, int height)
+{
+	printf("Base:当たりませんでした\n");
+	return false;
 }
 
 void Base::SetHp(int hp)

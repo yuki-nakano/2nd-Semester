@@ -1,16 +1,14 @@
-#ifndef BACE_H
-#define BACE_H
+#ifndef BASE_H
+#define BASE_H
 
-//基底クラス　(親クラス)
+// 基底クラス(親クラス)
 class Base
 {
 public:
 	Base();
-	 ~Base();
+	virtual ~Base();
+
 public:
-
-	virtual bool CheckHit(int x, int y, int width, int height);
-
 	void SetHp(int hp);
 	void SetPos(float x, float y);
 	void SetMoveSpeed(float speed);
@@ -19,17 +17,15 @@ public:
 	float GetPosX();
 	float GetPosY();
 	float GetMoveSpeed();
+
 private:
 	int m_Hp;
-	float m_PosX;
-	float m_PosY;
-	float m_MoveSpeed;
+	int m_PosX;
+	int m_PosY;
+	int m_MoveSpeed;
 
-	float m_Whidth;
-	float m_Height;
 };
 
 
-
-#endif // !BACE_H
+#endif // #ifndef BASE_H
 

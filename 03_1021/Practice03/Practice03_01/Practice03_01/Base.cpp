@@ -1,25 +1,17 @@
-#include "base.h"
-#include <stdio.h>
+#include "Base.h"
+
+
 
 Base::Base()
 {
 	m_Hp = 0;
-	m_PosX = 0.0f;
-	m_PosY = 0.0f;
-	m_MoveSpeed = 0.0f;
-
-	m_Whidth = 10;
-	m_Height = 10;
+	m_PosX = 0;
+	m_PosY = 0;
+	m_MoveSpeed = 0;
 }
 
 Base::~Base()
 {
-}
-
-bool Base::CheckHit(int x, int y, int width, int height)
-{
-	printf("Base:“–‚½‚è‚Ü‚¹‚ñ‚Å‚µ‚½");
-	return false;
 }
 
 void Base::SetHp(int hp)
@@ -29,8 +21,7 @@ void Base::SetHp(int hp)
 
 void Base::SetPos(float x, float y)
 {
-	m_PosX = x;
-	m_PosY = y;
+	m_PosX = x, m_PosY = y;
 }
 
 void Base::SetMoveSpeed(float speed)
