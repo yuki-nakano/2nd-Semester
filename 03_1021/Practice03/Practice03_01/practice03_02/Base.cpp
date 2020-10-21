@@ -2,10 +2,6 @@
 
 Base::Base()
 {
-	m_Hp = 0;
-	m_PosX = 0.0f;
-	m_PosY = 0.0f;
-	m_MoveSpeed = 0.0f;
 }
 
 Base::~Base()
