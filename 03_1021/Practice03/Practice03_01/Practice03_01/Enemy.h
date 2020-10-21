@@ -3,6 +3,7 @@
 
 #include "Base.h"
 
+
 class Enemy : public Base
 {
 public:
@@ -11,6 +12,9 @@ public:
 public:
 	void Exec();
 	void Draw();
+
+public:
+	bool CheckHit(int x, int y, int width, int height);
 
 private:
 	int m_Routine;

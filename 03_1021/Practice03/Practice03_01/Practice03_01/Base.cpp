@@ -1,4 +1,5 @@
 #include "base.h"
+#include <stdio.h>
 
 Base::Base()
 {
@@ -6,10 +7,19 @@ Base::Base()
 	m_PosX = 0.0f;
 	m_PosY = 0.0f;
 	m_MoveSpeed = 0.0f;
+
+	m_Whidth = 10;
+	m_Height = 10;
 }
 
 Base::~Base()
 {
+}
+
+bool Base::CheckHit(int x, int y, int width, int height)
+{
+	printf("Base:“–‚½‚è‚Ü‚¹‚ñ‚Å‚µ‚½");
+	return false;
 }
 
 void Base::SetHp(int hp)

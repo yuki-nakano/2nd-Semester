@@ -3,6 +3,7 @@
 #include <string>
 #include "Player.h"
 #include "Enemy.h"
+#include "Base.h"
 
 void printStatus(std::string name, Base* target);
 
@@ -21,9 +22,11 @@ int main()
 	printf("-------------\n");
 
 	pBase = &player;
+	pBase->CheckHit(10, 10, 20, 30);
 	printStatus("Player", pBase);
 
 	pBase = &enemy;
+	pBase->CheckHit(10, 10, 20, 30);
 	printStatus("Enemy", pBase);
 
 
