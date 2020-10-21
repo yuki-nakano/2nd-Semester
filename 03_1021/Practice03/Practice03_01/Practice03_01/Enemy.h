@@ -11,6 +11,9 @@ public:
 public:
 	void Exec();
 	void Draw();
+
+private:
+	int m_Routine;
 };
 
 #endif
