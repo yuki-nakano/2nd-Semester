@@ -11,12 +11,12 @@ Base::Base()
 	m_Width = 10;
 	m_Height = 10;
 
-	printf("Base:コンストラクタ");
+	printf("Base:コンストラクタ\n");
 }
 
 Base::~Base()
 {
-	printf("Base:デストラクタ");
+	printf("Base:デストラクタ\n");
 }
 
 void Base::Exec()
